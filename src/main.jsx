@@ -30,6 +30,12 @@ const router = createBrowserRouter([
       {
         path: "singleproduct",
         element: <SingleProduct />,
+        children: [
+          {
+            path: ":id",
+           element: <SingleProduct />,
+          }
+        ]
       },
     ],
   },

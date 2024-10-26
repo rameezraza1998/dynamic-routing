@@ -31,9 +31,9 @@ function Product() {
   }
   const navigate = useNavigate()
 
-  const singleproduct = (item) => {
-    navigate(`/product/${item.brand}`)
-    // console.log(item.brand);
+  const singleproduct = (id) => {
+    navigate(`/singleproduct/${id}`)
+    console.log("button press");
     
   }
   return (
@@ -47,7 +47,7 @@ function Product() {
             title={product.title}
             thumbnail={product.thumbnail}
             des={product.description}
-            func={()=>singleproduct(item)}
+            func={()=>singleproduct(product.id)}
           />
         </Col>
       ))}
